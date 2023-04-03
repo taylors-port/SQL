@@ -1,0 +1,28 @@
+--create a clothing store database 
+
+CREATE TABLE my_store (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, stock INTEGER, color TEXT);
+
+INSERT INTO my_store VALUES (1, "jeans", 60, 5, "blue");
+INSERT INTO my_store VALUES (2, "joggers", 45, 10, "black"); 
+INSERT INTO my_store VALUES (3, "tshirt", 15, 10, "pink"); 
+INSERT INTO my_store VALUES (4, "blouse", 25, 15, "yellow"); 
+INSERT INTO my_store VALUES (5, "maxi dress", 75, 10, "blue"); 
+INSERT INTO my_store VALUES (6, "capri", 65, 5, "black");
+INSERT INTO my_store VALUES (7, "shorts", 40, 10, "blue"); 
+INSERT INTO my_store VALUES (8, "tshirt", 20, 10, "black"); 
+INSERT INTO my_store VALUES (9, "skirt", 25, 15, "blue"); 
+INSERT INTO my_store VALUES (10, "cocktail dress", 75, 10, "green");
+INSERT INTO my_store VALUES (11, "sneakers", 45, 5, "white");
+INSERT INTO my_store VALUES (12, "pj set", 30, 10, "blue"); 
+INSERT INTO my_store VALUES (13, "sweatshirt", 35, 10, "purple"); 
+INSERT INTO my_store VALUES (14, "jacket", 25, 15, "teal"); 
+INSERT INTO my_store VALUES (15, "dress", 75, 10, "purple");
+
+--display the database ordered by price highest to lowest. 
+SELECT * FROM my_store order by price desc; 
+
+--display how much stock the store has at this time.  
+SELECT sum(stock) FROM my_store; 
+
+--display the average price of all the items.  
+SELECT AVG(price) "avg price of all stock" FROM my_store; 
